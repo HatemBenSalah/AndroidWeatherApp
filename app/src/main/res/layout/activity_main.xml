@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/meteo"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Spinner
+                android:id="@+id/seletc"
+                android:layout_width="match_parent"
+                android:layout_height="53dp" />
+
+            <RelativeLayout
+                android:id="@+id/rlMain"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:background="@drawable/meteo"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/txtCity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="City"
+                    android:textColor="#ffffff"
+                    android:textSize="32dp" />
+
+                <TextView
+                    android:id="@+id/txtTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtCity"
+                    android:fontFamily="sans-serif"
+                    android:text="Time"
+                    android:textColor="#ffffff"
+                    android:textSize="16dp" />
+
+                <ImageView
+                    android:id="@+id/imgIcon"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_below="@id/txtTime"
+                    android:src="@drawable/phc" />
+
+                <TextView
+                    android:id="@+id/txtValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/imgIcon"
+                    android:layout_alignParentRight="true"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:text="3°"
+                    android:textColor="#ffffff"
+                    android:textSize="70dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlSub"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rlMain"
+                android:background="#ffffff"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/imgFeelLike"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/temp" />
+
+                <TextView
+                    android:id="@+id/txtTitleFeelLike"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/imgFeelLike"
+                    android:text="Feel Like"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/txtValueFeelLike"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtTitleFeelLike"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/imgFeelLike"
+                    android:text="7°"
+                    android:textSize="20dp" />
+
+                <ImageView
+                    android:id="@+id/imgHumidity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imgFeelLike"
+                    android:layout_marginTop="30dp"
+                    android:src="@drawable/humidity" />
+
+                <TextView
+                    android:id="@+id/txtTitleHumidity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/imgHumidity"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/imgHumidity"
+                    android:text="Humidity"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/txtValueHumidity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtTitleHumidity"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/imgHumidity"
+                    android:text="7°"
+                    android:textSize="20dp" />
+
+                <ImageView
+                    android:id="@+id/imgVision"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imgHumidity"
+                    android:layout_marginTop="30dp"
+                    android:src="@drawable/vision" />
+
+                <TextView
+                    android:id="@+id/txtTitleVision"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/imgVision"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/imgVision"
+                    android:text="Vision"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/txtValueVision"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtTitleVision"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/imgVision"
+                    android:text="7°"
+                    android:textSize="20dp" />
+
+            </RelativeLayout>
+
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/rpp1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/holo_green_light"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:id="@+id/txtCity1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="City"
+                            android:textColor="#ffffff"
+                            android:textSize="32dp" />
+
+                        <TextView
+                            android:id="@+id/txtTime1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/txtCity1"
+                            android:fontFamily="sans-serif"
+                            android:text="Day"
+                            android:textColor="#ffffff"
+                            android:textSize="16dp" />
+
+                        <ImageView
+                            android:id="@+id/imgIcon1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="120dp"
+                            android:layout_below="@id/txtTime1"
+                            android:src="@drawable/phc" />
+
+                        <TextView
+                            android:id="@+id/txtValue1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@id/imgIcon1"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="sans-serif-condensed-light"
+                            android:text="3°"
+                            android:textColor="#ffffff"
+                            android:textSize="70dp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rpp2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/holo_green_light"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:id="@+id/txtCity2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="City"
+                            android:textColor="#ffffff"
+                            android:textSize="32dp" />
+
+                        <TextView
+                            android:id="@+id/txtTime2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/txtCity2"
+                            android:fontFamily="sans-serif"
+                            android:text="Day"
+                            android:textColor="#ffffff"
+                            android:textSize="16dp" />
+
+                        <ImageView
+                            android:id="@+id/imgIcon2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="120dp"
+                            android:layout_below="@id/txtTime2"
+                            android:src="@drawable/phc" />
+
+                        <TextView
+                            android:id="@+id/txtValue3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@id/imgIcon2"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="sans-serif-condensed-light"
+                            android:text="3°"
+                            android:textColor="#ffffff"
+                            android:textSize="70dp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rpp4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/holo_green_light"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:id="@+id/txtCity4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="City"
+                            android:textColor="#ffffff"
+                            android:textSize="32dp" />
+
+                        <TextView
+                            android:id="@+id/txtTime4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/txtCity4"
+                            android:fontFamily="sans-serif"
+                            android:text="Day"
+                            android:textColor="#ffffff"
+                            android:textSize="16dp" />
+
+                        <ImageView
+                            android:id="@+id/imgIcon4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="120dp"
+                            android:layout_below="@id/txtTime4"
+                            android:src="@drawable/phc" />
+
+                        <TextView
+                            android:id="@+id/txtValue5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@id/imgIcon4"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="sans-serif-condensed-light"
+                            android:text="3°"
+                            android:textColor="#ffffff"
+                            android:textSize="70dp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rpp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/holo_green_light"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:id="@+id/txtCity6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="City"
+                            android:textColor="#ffffff"
+                            android:textSize="32dp" />
+
+                        <TextView
+                            android:id="@+id/txtTime6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/txtCity6"
+                            android:fontFamily="sans-serif"
+                            android:text="Day"
+                            android:textColor="#ffffff"
+                            android:textSize="16dp" />
+
+                        <ImageView
+                            android:id="@+id/imgIcon6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="120dp"
+                            android:layout_below="@id/txtTime6"
+                            android:src="@drawable/phc" />
+
+                        <TextView
+                            android:id="@+id/txtValue6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@id/imgIcon6"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="sans-serif-condensed-light"
+                            android:text="3°"
+                            android:textColor="#ffffff"
+                            android:textSize="70dp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</GridLayout>

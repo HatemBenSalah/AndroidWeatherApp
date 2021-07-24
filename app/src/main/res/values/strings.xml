@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Meteo</string>
+
+    <string-array name="region">
+
+        <item>Mahdia</item>
+        <item>ben arous</item>
+        <item>tunis</item>
+        <item>ariana</item>
+        <item>sousse</item>
+        <item>sidi bouzid</item>
+        <item>BÉJA</item>
+        <item>Sfax</item>
+        <item>kairouan</item>
+        <item>gabés</item>
+        <item>bizerte</item>
+        <item>nabeul </item>
+        <item>tozeur</item>
+        <item>tataouine</item>
+        <item>Zaghouan</item>
+        <item>Siliana</item>
+
+
+
+    </string-array>
+</resources>
